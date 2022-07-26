@@ -1,5 +1,7 @@
-$parnetFolderLocation = #!#"D:\\..\\..\\"
-Get-ChildItem $parentFolderLocation -recurse -Filter #!#*.fileextension | `
+$parnetFolderLocation = #!# "D:\\..\\..\\"
+$fileExtension = #!# "*.txt"
+
+Get-ChildItem $parentFolderLocation -recurse -Filter $fileextension | `
 Foreach-Object{
     #Get Text 
     $contentOfFile = Get-Content $_.FullName
